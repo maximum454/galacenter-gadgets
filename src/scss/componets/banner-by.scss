@@ -50,6 +50,7 @@
 	}
 
 	@include r(767) {
+		margin-bottom: 47px;
 		&__item {
 			flex-direction: column;
 			padding: 33px 20px 8px 47px;
