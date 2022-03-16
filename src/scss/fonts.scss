@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro/GothamPro-Black.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/GothamPro/GothamPro-Black.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+	url('../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro/GothamPro-Light.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/GothamPro/GothamPro-Light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+	url('../fonts/GothamPro/GothamPro-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+
+
+
+$font1: 'GothamPro', sans-serif;
