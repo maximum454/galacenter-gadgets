@@ -30,7 +30,7 @@ body {
 }
 
 .main.container {
-  max-width: 1044px;
+  max-width: 1076px;
 }
 
 .breadcrumb {
@@ -69,7 +69,7 @@ body {
 }
 
 .slider-gadgets__item {
-  max-width: 655px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -80,6 +80,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.slider-gadgets__txt {
+  margin-left: 50px;
 }
 
 .slider-gadgets__name {
@@ -102,9 +106,6 @@ body {
 }
 
 .slider-gadgets__option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -112,6 +113,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: none;
 }
 
 .slider-gadgets__option-item {
@@ -130,7 +132,23 @@ body {
 }
 
 .slider-gadgets .swiper-slide {
-  max-width: 655px;
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.slider-gadgets .swiper-slide.swiper-slide-active {
+  max-width: 575px !important;
+  width: auto !important;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.slider-gadgets .swiper-slide.swiper-slide-active .slider-gadgets__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .slider-gadgets .swiper-button-next:after,
@@ -149,6 +167,14 @@ body {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.slider-gadgets .swiper-button-prev {
+  left: 178px;
+}
+
+.slider-gadgets .swiper-button-next {
+  right: 178px;
 }
 
 .block-gadgets {

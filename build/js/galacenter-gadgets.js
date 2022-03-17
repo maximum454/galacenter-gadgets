@@ -1,8 +1,16 @@
 const sliderGadgetsSwiper = new Swiper('.slider-gadgets-swiper', {
     loop: true,
-    slidesPerView: 1,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    observer: true,
+    direction: 'horizontal',
+    autoplayStopOnLast: false,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    initialSlide: 1,
     centeredSlides: true,
-    spaceBetween: 30,
+    slidesOffsetBefore: -100,
 
     // Navigation arrows
     navigation: {
