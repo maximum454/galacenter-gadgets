@@ -1,18 +1,28 @@
 .slider-gadgets{
 	margin-bottom: 124px;
+	overflow: hidden;
 	&__body{
-		overflow: hidden;
+		padding: 0 174px;
+
 	}
 	&__item{
 		max-width: 100%;
-		margin: 0 auto;
+		margin: 0 auto 40px;
 	}
 	&__row{
 		display: flex;
 		justify-content: space-between;
 	}
 	&__txt{
-		margin-left: 50px;
+	}
+	&__img{
+		margin-bottom: 40px;
+		img{
+			display: block;
+			object-fit: contain;
+			height: 100%;
+			width: 100%;
+		}
 	}
 	&__name{
 		font-family: $font1;
@@ -43,21 +53,47 @@
 		line-height: 13px;
 		color: #565757;
 		border-bottom: 1px solid #777B7C;
-		text-align: center;
+		text-align: right;
 		padding: 10px;
+		position: relative;
+	}
+	&__line{
+		background-color: #777B7C;
+		height: 1px;
+		margin: 0;
+		padding: 0;
+		border: none;
+		position: absolute;
+	}
+	&__thumb{
+		overflow: hidden;
 	}
 	.slider-gadgets-swiper{
 		position: relative;
+		margin: 0 auto;
+	}
+	.swiper-wrapper{
+		transition-timing-function: linear;
 	}
 	.swiper-slide{
-		transform: scale(.5);
-
+		align-self: flex-end;
+		max-width: 174px;
 		&.swiper-slide-active{
-			max-width: 575px!important;
-			width: auto!important;
-			transform: scale(1);
+			max-width: 100%;
+			padding: 0 50px;
+			.slider-gadgets__item{
+				margin-bottom: 0;
+			}
 			.slider-gadgets__option{
 				display: flex;
+			}
+			.slider-gadgets__txt{
+				margin-top: 40px;
+				margin-left: 50px;
+			}
+			.slider-gadgets__img{
+				height: auto;
+				max-width: 346px;
 			}
 		}
 	}
@@ -76,9 +112,45 @@
 		transform: rotate(180deg);
 	}
 	.swiper-button-prev{
-		left: 178px;
+		left: 0;
 	}
 	.swiper-button-next{
-		right: 178px;
+		right: 0;
+	}
+
+
+	.slider-gadgets-swiper-thumb{
+		display: none;
+		.swiper-slide{
+			align-self: flex-end;
+			max-width: 100%;
+			.slider-gadgets__item{
+				margin: 0;
+			}
+			&.swiper-slide-active{
+				max-width: 100%;
+				padding: 0;
+				.slider-gadgets__item{
+					margin-bottom: 0;
+				}
+				.slider-gadgets__txt{
+					margin: 0;
+				}
+				.slider-gadgets__img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	@include r(767){
+		&__body{
+			padding: 0;
+			overflow: hidden;
+
+		}
+		.slider-gadgets-swiper-thumb{
+			display: block;
+		}
 	}
 }
