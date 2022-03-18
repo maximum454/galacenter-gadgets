@@ -2,11 +2,31 @@ const sliderGadgetsSwiperThumb = new Swiper(".slider-gadgets-swiper-thumb", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 3,
-    freeMode: true,
     watchOverflow: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     observer: true,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            centeredSlides: false,
+            slidesOffsetBefore: 0,
+            spaceBetween: 0,
+        },
+        480: {
+            slidesPerView: 3,
+            centeredSlides: false,
+            slidesOffsetBefore: 0,
+            spaceBetween: 0,
+        },
+        768: {
+            slidesPerView: 4,
+            initialSlide: 0,
+            centeredSlides: true,
+            slidesOffsetBefore: 0,
+        },
+    }
 });
 
 const sliderGadgetsSwiper = new Swiper('.slider-gadgets-swiper', {
@@ -26,27 +46,7 @@ const sliderGadgetsSwiper = new Swiper('.slider-gadgets-swiper', {
     thumbs: {
         swiper: sliderGadgetsSwiperThumb,
     },
-    breakpoints: {
-/*        // when window width is >= 320px
-        320: {
-            slidesPerView: 1,
-            centeredSlides: false,
-            slidesOffsetBefore: 0,
-            spaceBetween: 0,
-        },
-        768: {
-            slidesPerView: 1,
-            initialSlide: 0,
-            centeredSlides: true,
-            slidesOffsetBefore: 0,
-        },
-        1024: {
-            slidesPerView: 3,
-            initialSlide: 1,
-            centeredSlides: true,
-            slidesOffsetBefore: -80,
-        },*/
-    }
+
 });
 
 

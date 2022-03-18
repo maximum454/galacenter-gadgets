@@ -6,17 +6,19 @@
 
 	}
 	&__item{
+		text-decoration: none;
+		display: block;
 		max-width: 100%;
 		margin: 0 auto 40px;
 	}
 	&__row{
 		display: flex;
 		justify-content: space-between;
+		gap: 20px;
 	}
 	&__txt{
 	}
 	&__img{
-		margin-bottom: 40px;
 		img{
 			display: block;
 			object-fit: contain;
@@ -40,6 +42,7 @@
 		font-size: 14px;
 		line-height: 1;
 		text-transform: uppercase;
+		color: #302F2F;
 	}
 	&__option{
 		flex-direction: column;
@@ -54,8 +57,52 @@
 		color: #565757;
 		border-bottom: 1px solid #777B7C;
 		text-align: right;
-		padding: 10px;
+		padding: 10px 0;
 		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: -28px;
+			width: 30px;
+			background-color: #777B7C;
+			height: 1px;
+		}
+		&:first-child{
+			&:before{
+				bottom: -19px;
+				left: -43px;
+				transform: rotate(-45deg);
+				width: 50px;
+			}
+		}
+		&:last-child{
+			&:before{
+				bottom: 17px;
+				left: -43px;
+				background-color: #777B7C;
+				transform: rotate(45deg);
+				width: 50px;
+			}
+		}
+		&:nth-child(2){
+			&:before{
+				bottom: -6px;
+				left: -28px;
+				background-color: #777B7C;
+				transform: rotate(-20deg);
+				width: 30px;
+			}
+		}
+		&:nth-child(4){
+			&:before{
+				bottom: 4px;
+				left: -28px;
+				background-color: #777B7C;
+				transform: rotate(20deg);
+				width: 30px;
+			}
+		}
 	}
 	&__line{
 		background-color: #777B7C;
@@ -142,15 +189,58 @@
 			}
 		}
 	}
-
-	@include r(767){
+	@include r(1023){
+		margin-bottom: 32px;
 		&__body{
 			padding: 0;
 			overflow: hidden;
 
 		}
+		&__option-item{
+			font-size: 12px;
+		}
+		.swiper-slide{
+			align-self: flex-end;
+			max-width: 174px;
+			&.swiper-slide-active{
+				max-width: 100%;
+				padding: 0;
+				.slider-gadgets__txt{
+					margin-left: 0;
+				}
+				.slider-gadgets__img{
+					height: auto;
+					max-width: 100%;
+					margin-right: 20px;
+				}
+			}
+		}
+		.swiper-button-prev{
+			left: auto;
+			right: 70px;
+			bottom: 0;
+			margin: auto 0 0 0;
+			top: auto;
+		}
+		.swiper-button-next{
+			right: 0;
+			margin: auto 0 0 0;
+			top: auto;
+			bottom: 0;
+		}
 		.slider-gadgets-swiper-thumb{
 			display: block;
+			margin-top: 40px;
+			.slider-gadgets__img{
+				margin-bottom: 24px;
+				max-width: 88px!important;
+			}
+			.slider-gadgets__name{
+				font-size: 12px;
+			}
+			.slider-gadgets__anons{
+				font-size: 12px;
+			}
 		}
 	}
 }

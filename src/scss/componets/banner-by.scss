@@ -1,6 +1,6 @@
 .banner-by {
-	margin-bottom: 146px;
-
+	position: relative;
+	z-index: 1;
 	&__body {
 		display: flex;
 		flex-wrap: wrap;
@@ -50,7 +50,7 @@
 	}
 
 	@include r(767) {
-		margin-bottom: 47px;
+
 		&__item {
 			flex-direction: column;
 			padding: 33px 20px 8px 47px;
