@@ -86,7 +86,7 @@ body {
 }
 
 .header-gadgets__logo {
-  margin-bottom: 77px;
+  margin-bottom: 72px;
 }
 
 .slider-gadgets {
@@ -115,12 +115,14 @@ body {
   gap: 20px;
 }
 
+.slider-gadgets__img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 .slider-gadgets__img img {
-  display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
-  width: 100%;
+  width: 140px;
+  height: 140px;
 }
 
 .slider-gadgets__name {
@@ -151,7 +153,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  height: 395px;
 }
 
 .slider-gadgets__option-item {
@@ -242,7 +248,10 @@ body {
 .slider-gadgets .swiper-slide {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  max-width: 174px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .slider-gadgets .swiper-slide.swiper-slide-active {
@@ -258,6 +267,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
 }
 
 .slider-gadgets .swiper-slide.swiper-slide-active .slider-gadgets__txt {
@@ -268,6 +278,22 @@ body {
 .slider-gadgets .swiper-slide.swiper-slide-active .slider-gadgets__img {
   height: auto;
   max-width: 346px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.slider-gadgets .swiper-slide.swiper-slide-active .slider-gadgets__img img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-gadgets .swiper-slide.swiper-slide-prev {
+  -webkit-transform: translate(522px, 0);
+      -ms-transform: translate(522px, 0);
+          transform: translate(522px, 0);
 }
 
 .slider-gadgets .swiper-button-next:after,
@@ -497,10 +523,15 @@ body {
     font-size: 12px;
   }
 
+  .slider-gadgets__img img {
+    width: 100%;
+    height: auto;
+  }
+
   .slider-gadgets .swiper-slide {
     -ms-flex-item-align: end;
         align-self: flex-end;
-    max-width: 174px;
+    max-width: 100%;
   }
 
   .slider-gadgets .swiper-slide.swiper-slide-active {
@@ -516,6 +547,12 @@ body {
     height: auto;
     max-width: 100%;
     margin-right: 20px;
+  }
+
+  .slider-gadgets .swiper-slide.swiper-slide-prev {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   .slider-gadgets .swiper-button-prev {

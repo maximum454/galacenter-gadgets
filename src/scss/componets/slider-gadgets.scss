@@ -19,11 +19,10 @@
 	&__txt{
 	}
 	&__img{
+		align-self: flex-end;
 		img{
-			display: block;
-			object-fit: contain;
-			height: 100%;
-			width: 100%;
+			width: 140px;
+			height: 140px;
 		}
 	}
 	&__name{
@@ -47,7 +46,9 @@
 	&__option{
 		flex-direction: column;
 		justify-content: space-between;
-		display: none;
+		display: flex;
+		opacity: 0;
+		height: 395px;
 	}
 	&__option-item{
 		font-family: $font1;
@@ -124,7 +125,8 @@
 	}
 	.swiper-slide{
 		align-self: flex-end;
-		max-width: 174px;
+		background-color: #fff;
+		transition: .3s;
 		&.swiper-slide-active{
 			max-width: 100%;
 			padding: 0 50px;
@@ -133,6 +135,7 @@
 			}
 			.slider-gadgets__option{
 				display: flex;
+				opacity: 1;
 			}
 			.slider-gadgets__txt{
 				margin-top: 40px;
@@ -141,8 +144,18 @@
 			.slider-gadgets__img{
 				height: auto;
 				max-width: 346px;
+				align-self: center;
+				img{
+					display: block;
+					object-fit: contain;
+					height: 100%;
+					width: 100%;
+				}
 			}
 		}
+	}
+	.swiper-slide.swiper-slide-prev {
+		transform: translate(522px,0);
 	}
 	.swiper-button-next:after,
 	.swiper-button-prev:after {
@@ -199,9 +212,15 @@
 		&__option-item{
 			font-size: 12px;
 		}
+		&__img{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
 		.swiper-slide{
 			align-self: flex-end;
-			max-width: 174px;
+			max-width: 100%;
 			&.swiper-slide-active{
 				max-width: 100%;
 				padding: 0;
@@ -214,6 +233,9 @@
 					margin-right: 20px;
 				}
 			}
+		}
+		.swiper-slide.swiper-slide-prev {
+			transform: translate(0,0);
 		}
 		.swiper-button-prev{
 			left: auto;

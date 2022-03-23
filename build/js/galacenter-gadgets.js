@@ -1,6 +1,6 @@
 const sliderGadgetsSwiperThumb = new Swiper(".slider-gadgets-swiper-thumb", {
     loop: true,
-    spaceBetween: 10,
+    spaceBetween: 20,
     slidesPerView: 3,
     watchOverflow: true,
     watchSlidesVisibility: true,
@@ -38,7 +38,8 @@ const sliderGadgetsSwiper = new Swiper('.slider-gadgets-swiper', {
     spaceBetween: 0,
     slidesPerView: 'auto',
     initialSlide: 1,
-    centeredSlides: true,
+    centeredSlides: false,
+    speed: 300,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -46,37 +47,6 @@ const sliderGadgetsSwiper = new Swiper('.slider-gadgets-swiper', {
     thumbs: {
         swiper: sliderGadgetsSwiperThumb,
     },
-
 });
 
 
-
-function imgHeight(){
-    const currentImg = document.querySelector('.slider-gadgets__body .swiper-slide-active .slider-gadgets__img');
-    const currentHeight = currentImg.clientHeight;
-    const pointHeight = currentHeight / optionItem().length;
-    console.log(pointHeight);
-}
-function optionItem(){
-    const items = document.querySelectorAll('.slider-gadgets__body .swiper-slide-active .slider-gadgets__option-item')
-    let arrItem = [];
-    for (let i = 0; i < items.length; i++) {
-        let rect = items[i].getBoundingClientRect();
-        arrItem.push(rect.left);
-        items[i].appendChild(lineCreate(rect.top, rect.bottom, rect.left, rect.right, rect.width));
-        console.log(rect)
-    }
-    return arrItem;
-}
-
-function lineCreate(top, bottom, left, right, width){
-    const newDiv = document.createElement("hr")
-    newDiv.className = 'slider-gadgets__line';
-    newDiv.style.cssText=`top: ${top}px;
-    bottom: ${bottom}px;
-    left: ${left}px;
-    right: ${right}px;
-    width: ${width}px;
-  `;
-    return newDiv;
-}
