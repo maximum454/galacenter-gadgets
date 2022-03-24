@@ -56,22 +56,31 @@
 		font-size: 14px;
 		line-height: 13px;
 		color: #565757;
-		border-bottom: 1px solid #777B7C;
 		text-align: right;
 		padding: 10px 0;
 		position: relative;
+		height: 66px;
 		&:before{
 			content: '';
 			position: absolute;
-			bottom: -1px;
+			bottom: 32px;
 			left: -28px;
 			width: 30px;
 			background-color: #777B7C;
 			height: 1px;
 		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			background-color: #777B7C;
+			height: 1px;
+		}
 		&:first-child{
 			&:before{
-				bottom: -19px;
+				bottom: 14px;
 				left: -43px;
 				transform: rotate(-45deg);
 				width: 50px;
@@ -79,7 +88,7 @@
 		}
 		&:last-child{
 			&:before{
-				bottom: 17px;
+				bottom: 50px;
 				left: -43px;
 				background-color: #777B7C;
 				transform: rotate(45deg);
@@ -88,7 +97,7 @@
 		}
 		&:nth-child(2){
 			&:before{
-				bottom: -6px;
+				bottom: 27px;
 				left: -28px;
 				background-color: #777B7C;
 				transform: rotate(-20deg);
@@ -97,12 +106,17 @@
 		}
 		&:nth-child(4){
 			&:before{
-				bottom: 4px;
+				bottom: 37px;
 				left: -28px;
 				background-color: #777B7C;
 				transform: rotate(20deg);
 				width: 30px;
 			}
+		}
+		span{
+			display: block;
+			padding: 5px 0;
+			height: 23px;
 		}
 	}
 	&__line{
