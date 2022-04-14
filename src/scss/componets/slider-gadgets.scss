@@ -290,7 +290,7 @@
 			}
 		}
 	}
-	@include r(374){
+	@include r(414){
 		&__option{
 			height: 320px;
 		}
@@ -323,7 +323,7 @@
 			&.swiper-slide-active{
 				.slider-gadgets__img{
 					height: auto;
-					max-width: 100px;
+					max-width: 160px;
 					margin-right: 0;
 				}
 			}

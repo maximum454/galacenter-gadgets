@@ -1,15 +1,38 @@
 .header-gadgets {
-	text-align: center;
 	margin-bottom: 110px;
-	background-image: url("../img/header-gadgets-bg.png");
-	background-repeat: no-repeat;
-	background-position: bottom;
-	padding-top: 40px;
+	padding-top: 20px;
+	display: flex;
+	align-items: flex-end;
 	&__logo {
-		margin-bottom: 72px;
+		max-width: 98px;
+		margin-left: -30px;
+		img{
+			display: block;
+			height: auto;
+		}
+	}
+	.title-gadgets{
+		color: #0E4194;
+		text-align: left;
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 5px;
+		}
 	}
 
 	@include r(767) {
 		margin-bottom: 35px;
+		&__logo {
+			max-width: 63px;
+			margin-left: 0;
+		}
+		.title-gadgets{
+			font-size: 10px;
+			line-height: 10px;
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 5px;
+			}
+		}
 	}
 }

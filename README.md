@@ -3,3 +3,6 @@
 
 
 https://maximum454.github.io/galacenter-gadgets/build/
+
+Посадка
+https://www.galacentre.ru/chistyy-zvuk-vselennoy-by/

@@ -9,6 +9,21 @@ body{
 	padding-bottom: 146px;
 
 	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin: 0 auto;
+		transform: translate(-50%,0);
+		width: 100vw;
+		height: 100%;
+		background-image: url("../img/header-gadgets-bg.png");
+		background-repeat: no-repeat;
+		background-position: top;
+		pointer-events: none;
+		z-index: 0;
+	}
 	&:after{
 		content: '';
 		position: absolute;
@@ -37,8 +52,8 @@ body{
 .title-gadgets{
 	font-family: $font1;
 	font-weight: 900;
-	font-size: 18px;
-	line-height: 17px;
+	font-size: 15px;
+	line-height: 14px;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	color: #302F2F;
